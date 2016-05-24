@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER "Dylan Lindgren" <dylan.lindgren@gmail.com>
+MAINTAINER "Jonathan Azoff" <dev@beomni.com>
 
 WORKDIR /tmp
 
@@ -19,6 +19,7 @@ ADD config/nginx-start.sh /opt/bin/nginx-start.sh
 RUN chmod u=rwx /opt/bin/nginx-start.sh
 
 RUN mkdir -p /data
+RUN usermod -u 1000 www-data
 VOLUME ["/data"]
 
 # PORTS
