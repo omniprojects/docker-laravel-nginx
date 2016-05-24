@@ -21,7 +21,6 @@ RUN chmod u=rwx /opt/bin/nginx-start.sh
 RUN mkdir -p /data
 VOLUME ["/data"]
 RUN usermod -u 1000 www-data
-RUN chown -R www-data /data
 
 # PORTS
 EXPOSE 80
